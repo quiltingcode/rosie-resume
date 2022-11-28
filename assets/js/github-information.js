@@ -1,6 +1,12 @@
 function userInformationHTML(user) {
-    
-}
+    return `
+    <h2>${user.name}
+        <span class="small-name">
+            (@<a href="${user.html_url}" target="_blank">${user.login}</a>)
+        </span>
+    </h2>
+    `
+};
 
 function fetchGitHubInformation(event) {
     var username = $("#gh-username").val();
